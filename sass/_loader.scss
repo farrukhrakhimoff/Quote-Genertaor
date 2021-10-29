@@ -1,0 +1,17 @@
+/*Loader*/
+.loader{        
+    position: absolute;
+    border: 1.6rem solid #f3f3f3;   /*Light grey*/
+    border-top: 1.6rem solid #3498db;   /*Blue*/
+    border-radius: 50%;
+    width: 14rem;           
+    height: 14rem;
+    right: 44%;         
+    top: 40%;                   
+    z-index: 1;     
+    animation: Spin 1s linear infinite;
+}               
+@keyframes Spin {
+    0% {transform: rotate(0deg); }
+    100% {transform: rotate(360deg);}   
+}

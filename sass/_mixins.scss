@@ -1,0 +1,40 @@
+
+//Media Query manager 
+/*
+0 - 600px; Phone
+600 - 900px; Tablet Portrait
+900 - 1200px; Tablet Landscape
+[1200 - 1800px] Normal desktop approach
+1800px + ; Big desktop
+
+
+&breakpoint argument choices
+
+-phone
+-tab-port
+-tab-land
+-big-desktop
+
+*/
+
+//2nd way - less effective way
+@mixin respond-phone {
+    @media (max-width: 600px){@content}
+
+}
+
+/*3rd way - very useful way*/
+@mixin respond($breakpoint){            
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em){@content}   //1800px            /* this is the biggest screen siz so need to use min-width*/
+    }
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em){@content}  //1200px
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em){@content}  //900px
+    }
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em){@content} //600px            /*We need to arrane it from highest one because of rule*/
+    }
+}

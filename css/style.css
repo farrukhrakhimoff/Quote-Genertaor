@@ -1,15 +1,32 @@
-/* line 1, sass/main.scss */
+/*
+0 - 600px; Phone
+600 - 900px; Tablet Portrait
+900 - 1200px; Tablet Landscape
+[1200 - 1800px] Normal desktop approach
+1800px + ; Big desktop
+
+
+&breakpoint argument choices
+
+-phone
+-tab-port
+-tab-land
+-big-desktop
+
+*/
+/*3rd way - very useful way*/
+/* line 1, sass/_base.scss */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
-/* line 6, sass/main.scss */
+/* line 6, sass/_base.scss */
 html {
   font-size: 62.5%;
   position: relative; }
 
-/* line 10, sass/main.scss */
+/* line 10, sass/_base.scss */
 body {
   background-color: #ffffff;
   /* Heropatterns.com => for bg-image */
@@ -19,73 +36,12 @@ body {
   font-family: Monserrat, sans-serif;
   font-weight: bold;
   text-align: center;
-  top: 50%; }
-
-/* line 23, sass/main.scss */
-.quote-container {
-  position: absolute;
-  top: 40%;
-  left: 10%;
-  width: auto;
-  box-shadow: 0 2rem 3rem rgba(121, 121, 121, 0.65);
-  min-width: 90rem;
-  padding: 2rem 3rem;
-  border-radius: .9rem;
-  background-color: rgba(255, 255, 255, 0.4);
-  text-align: center; }
-
-/* line 35, sass/main.scss */
-.fa-quote-left, .fa-quote-right {
-  font-size: 4rem; }
-
-/* line 39, sass/main.scss */
-.quote-text {
-  font-size: 3rem; }
-
-/* line 42, sass/main.scss */
-.quote-author {
-  font-size: 2rem;
-  margin-top: 15px;
-  font-weight: 400;
-  font-style: italic; }
-  /* line 47, sass/main.scss */
-  .quote-author hr {
-    margin: 1rem 0;
-    width: auto;
-    border: 1px solid black;
-    background-color: rgba(0, 0, 0, 0.2); }
-
-/* line 57, sass/main.scss */
-a, .new-quote {
-  font-size: 1.2rem;
-  cursor: pointer;
-  height: 2.5rem;
-  border: none;
-  border-radius: 1rem;
-  background-color: #333;
-  color: #ffffff;
-  padding: .5rem 1.8rem;
-  box-shadow: 0 0.3rem rgba(121, 121, 121, 0.65);
-  transition: all .2s;
-  text-decoration: none;
-  display: inline;
-  float: left; }
-  /* line 73, sass/main.scss */
-  a:hover, .new-quote:hover {
-    filter: brightness(110%);
-    transition: all .2s;
-    color: teal; }
-  /* line 78, sass/main.scss */
-  a:active, .new-quote:active {
-    transform: translate(0, 0.3rem);
-    box-shadow: 0 0.3rem rgba(121, 121, 121, 0.65); }
-
-/* line 83, sass/main.scss */
-.new-quote {
-  float: right; }
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%, 50%); }
 
 /*Loader*/
-/* line 88, sass/main.scss */
+/* line 2, sass/_loader.scss */
 .loader {
   position: absolute;
   border: 1.6rem solid #f3f3f3;
@@ -105,3 +61,66 @@ a, .new-quote {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+
+/* line 7, sass/main.scss */
+.quote-container {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: auto;
+  box-shadow: 0 2rem 3rem rgba(121, 121, 121, 0.65);
+  min-width: 90rem;
+  padding: 2rem 3rem;
+  border-radius: .9rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  text-align: center; }
+
+/* line 19, sass/main.scss */
+.fa-quote-left, .fa-quote-right {
+  font-size: 4rem; }
+
+/* line 23, sass/main.scss */
+.quote-text {
+  font-size: 3rem; }
+
+/* line 26, sass/main.scss */
+.quote-author {
+  font-size: 2rem;
+  margin-top: 15px;
+  font-weight: 400;
+  font-style: italic; }
+  /* line 31, sass/main.scss */
+  .quote-author hr {
+    margin: 1rem 0;
+    width: auto;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.2); }
+
+/* line 41, sass/main.scss */
+a, .new-quote {
+  font-size: 1.2rem;
+  cursor: pointer;
+  height: 2.5rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #333;
+  color: #ffffff;
+  padding: .5rem 1.8rem;
+  box-shadow: 0 0.3rem rgba(121, 121, 121, 0.65);
+  transition: all .2s;
+  text-decoration: none;
+  display: inline;
+  float: left; }
+  /* line 57, sass/main.scss */
+  a:hover, .new-quote:hover {
+    filter: brightness(110%);
+    transition: all .2s;
+    color: teal; }
+  /* line 62, sass/main.scss */
+  a:active, .new-quote:active {
+    transform: translate(0, 0.3rem);
+    box-shadow: 0 0.3rem rgba(121, 121, 121, 0.65); }
+
+/* line 67, sass/main.scss */
+.new-quote {
+  float: right; }

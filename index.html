@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <title>Quote Generator</title>
+</head>
+<body>
+    <!-- Loader here -->
+    <div class="loader"></div>
+
+    <!-- Quote container -->
+    <div class="quote-container" id="container">
+        
+        <!-- Text-paragraph here -->
+        <div class="quote-text">
+            <i class="fas fa-quote-left"></i>
+                <span class="quote" id="quote"> &nbsp;</span>
+            <i class="fas fa-quote-right"></i>
+            
+            <!-- Container for author-->
+            <div class="quote-author">
+                <!-- <hr> -->
+                <span class="author" id="author">Loading...</span>
+            </div>
+            <div class="button-container">
+                <a href="https://www.instagram.com/farrukh_rakhimoff/" class="button" id="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/farrukhbek-rakhimov-9570881b6/" class="button" id="linkedin"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/farrukhrakhimoff" class="button" id="github"><i class="fab fa-github"></i></a>
+
+                <button id="next" class="new-quote" onclick="getNewQuote()">New Quote</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

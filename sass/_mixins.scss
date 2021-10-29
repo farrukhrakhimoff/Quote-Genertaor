@@ -18,10 +18,10 @@
 */
 
 //2nd way - less effective way
-@mixin respond-phone {
-    @media (max-width: 600px){@content}
+// @mixin respond-phone {
+//     @media (max-width: 600px){@content}
 
-}
+// }
 
 /*3rd way - very useful way*/
 @mixin respond($breakpoint){            

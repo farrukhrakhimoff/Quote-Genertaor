@@ -4,14 +4,49 @@
     border: 1.6rem solid #f3f3f3;   /*Light grey*/
     border-top: 1.6rem solid #3498db;   /*Blue*/
     border-radius: 50%;
-    width: 14rem;           
-    height: 14rem;
-    right: 44%;         
-    top: 40%;                   
-    z-index: 1;     
+    width: 12rem;           
+    height: 12rem;
+    left: 45%;
+    top: 10%;           
+    
+    transform: translateX(-50%,50%);    
+    z-index: 1;    
     animation: Spin 1s linear infinite;
+
+    @include respond(big-desktop){
+        width: 13rem;           
+        height: 13rem;
+        left: 45%;
+        
+        border: 1.4rem solid #f3f3f3;
+        border-top: 1.4rem solid #3498db;
+    }
+    @include respond(tab-land){     //1024
+        width: 11rem;           
+        height: 11rem;
+        left: 45%;
+        
+        border: 1.4rem solid #f3f3f3;
+        border-top: 1.4rem solid #3498db;
+    }
+    @include respond(tab-port){
+        width: 8rem;           
+        height: 8rem;
+        left: 45%;
+        
+        border: 1.2rem solid #f3f3f3;
+        border-top: 1.2rem solid #3498db;
+    }
+    @include respond(phone){
+        width: 4rem;           
+        height: 4rem;
+        left: 45%;
+        
+        border: 1rem solid #f3f3f3;
+        border-top: 1rem solid #3498db;
+    }
 }               
-@keyframes Spin {
+@keyframes Spin {       
     0% {transform: rotate(0deg); }
     100% {transform: rotate(360deg);}   
 }

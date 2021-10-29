@@ -2,69 +2,7 @@
 @import 'base';
 @import 'variables';
 @import 'loader';
+@import 'containers';
 
 
-.quote-container{
-    position: absolute;
-    top: 40%;              
-    left: 10%;                               
-    width: auto;
-    box-shadow: 0 2rem 3rem rgba(121, 121, 121, .65);
-    min-width: 90rem;       
-    padding: 2rem 3rem;
-    border-radius: .9rem;
-    background-color: rgba(255, 255, 255, .4);
-    text-align: center;           
-}
-.fa-quote-left, .fa-quote-right{
-    font-size: 4rem;
-}       
-.quote{
-    &-text{
-        font-size: 3rem;
-    }
-    &-author{
-        font-size: 2rem;
-        margin-top: 15px;
-        font-weight: 400;
-        font-style: italic ;
-        hr{
-            margin: 1rem 0;
-            width: auto;
-            border: 1px solid black;
-            background-color: rgba(0, 0, 0, .2);
-        }
-    }
-}
-
-
-a, .new-quote{
-    font-size: 1.2rem;
-    cursor: pointer;
-    height: 2.5rem;          
-    border: none;
-    border-radius: 1rem;        
-    background-color: #333;
-    color: #ffffff;
-    padding: .5rem 1.8rem;
-    box-shadow: 0 0.3rem rgba(121, 121, 121, .65);
-    transition: all .2s;
-    
-    text-decoration: none;
-    display: inline;
-    float: left;
-    
-    &:hover{
-        filter: brightness(110%);
-        transition: all .2s;
-        color: teal;        
-    }
-    &:active{
-        transform: translate(0, 0.3rem);
-        box-shadow: 0 0.3rem rgba(121, 121, 121, .65);
-    }
-}
-.new-quote{
-    float: right;        
-}
-        
+// Responsive => base => containers => loader
